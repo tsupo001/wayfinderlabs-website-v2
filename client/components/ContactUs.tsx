@@ -12,16 +12,20 @@ export default function ContactUs() {
     project: "",
     service: "",
     email: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -49,7 +53,9 @@ ${formData.message}
       // Open user's email client
       window.location.href = mailtoLink;
 
-      setSubmitStatus("Email client opened. Please send the email to complete your submission.");
+      setSubmitStatus(
+        "Email client opened. Please send the email to complete your submission.",
+      );
 
       // Reset form after a delay
       setTimeout(() => {
@@ -58,14 +64,15 @@ ${formData.message}
           project: "",
           service: "",
           email: "",
-          message: ""
+          message: "",
         });
         setProjectStage("pre-tge");
         setSubmitStatus("");
       }, 3000);
-
     } catch (error) {
-      setSubmitStatus("Error opening email client. Please email us directly at tod@wayfinderlabs.io");
+      setSubmitStatus(
+        "Error opening email client. Please email us directly at tod@wayfinderlabs.io",
+      );
     } finally {
       setIsSubmitting(false);
     }
