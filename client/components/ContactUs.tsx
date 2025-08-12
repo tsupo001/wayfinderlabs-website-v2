@@ -127,7 +127,12 @@ ${formData.message}
 
             {/* Right side - Contact Form */}
             <div className="w-full lg:w-[507px] flex flex-col gap-6">
-              <form className="flex flex-col gap-6">
+              {submitStatus && (
+                <div className="p-4 rounded-lg bg-white/10 border border-white/20">
+                  <p className="text-white text-sm">{submitStatus}</p>
+                </div>
+              )}
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 {/* Name Field */}
                 <div className="flex flex-col gap-1">
                   <Label
