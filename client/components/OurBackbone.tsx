@@ -60,10 +60,10 @@ export default function OurBackbone() {
           <div
             key={index}
             className={`
-              w-full lg:w-[610px] h-auto min-h-[250px] lg:min-h-[289px] 
-              rounded-[50px] p-8 lg:p-[50px] 
-              ${feature.bgColor} 
-              flex flex-col gap-6 
+              w-full h-auto min-h-[320px] lg:min-h-[350px]
+              rounded-[50px] p-8 lg:p-[50px]
+              ${feature.bgColor}
+              flex flex-col gap-6
               relative
             `}
           >
