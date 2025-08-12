@@ -10,7 +10,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="flex w-full justify-between items-center px-4 lg:px-[100px] py-6">
+    <nav className="flex w-full justify-between items-center px-4 lg:px-[100px] pt-6 pb-12">
       <div className="flex-shrink-0">
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/cf64cc2c7b1744e335a0f82a7cc132158948037e?width=560"
