@@ -57,11 +57,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Wayfinder Labs design colors
+        "wayfinder-dark": "hsl(var(--dark))",
+        "wayfinder-coin": "hsl(var(--coin-color))",
+        "wayfinder-icon": "hsl(var(--icon-color))",
+        "wayfinder-purple": "hsl(var(--brand-purple))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "3xl": "1.5rem", /* 24px */
+        "4xl": "2rem", /* 32px */
+        "5xl": "2.5rem", /* 40px */
+        "6xl": "3.125rem", /* 50px */
+      },
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
