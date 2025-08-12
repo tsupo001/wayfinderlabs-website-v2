@@ -3,35 +3,42 @@ export default function OurBackbone() {
     {
       number: "01",
       title: "Modular Infrastructure",
-      description: "Automated quoting, rebalancing, and venue-aware execution tailored for the idiosyncrasies of your markets.",
+      description:
+        "Automated quoting, rebalancing, and venue-aware execution tailored for the idiosyncrasies of your markets.",
       bgColor: "bg-black",
-      textColor: "text-white"
+      textColor: "text-white",
     },
     {
       number: "02",
       title: "Global Footprint",
-      description: "Incorporated and operational across multiple jurisdictions for access to regulated rails. We serve partners globally, with direct exchange connectivity.",
+      description:
+        "Incorporated and operational across multiple jurisdictions for access to regulated rails. We serve partners globally, with direct exchange connectivity.",
       bgColor: "bg-white",
-      textColor: "text-black"
+      textColor: "text-black",
     },
     {
       number: "03",
       title: "Security-First Architecture",
-      description: "Segregated infra, strict access controls, and strategy isolation — your market's health and our edge are protected.",
+      description:
+        "Segregated infra, strict access controls, and strategy isolation — your market's health and our edge are protected.",
       bgColor: "bg-white",
-      textColor: "text-black"
+      textColor: "text-black",
     },
     {
       number: "04",
       title: "Smart Risk Management",
-      description: "Live inventory buffers, automated exposure control, and real-time risk protect both liquidity and longevity.",
+      description:
+        "Live inventory buffers, automated exposure control, and real-time risk protect both liquidity and longevity.",
       bgColor: "bg-black",
-      textColor: "text-white"
-    }
+      textColor: "text-white",
+    },
   ];
 
   return (
-    <section id="our-backbone" className="flex flex-col items-center gap-12 w-full">
+    <section
+      id="our-backbone"
+      className="flex flex-col items-center gap-12 w-full"
+    >
       {/* Header */}
       <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 px-4 lg:px-[100px] w-full">
         <div className="flex flex-col items-start">
@@ -42,7 +49,8 @@ export default function OurBackbone() {
           </div>
         </div>
         <p className="flex-1 text-black font-poppins text-lg lg:text-2xl font-normal leading-normal">
-          We operate with the speed, control, and security of a global trading desk — with the flexibility of a close partner.
+          We operate with the speed, control, and security of a global trading
+          desk — with the flexibility of a close partner.
         </p>
       </div>
 
@@ -61,15 +69,22 @@ export default function OurBackbone() {
           >
             {/* Background shape - for visual consistency */}
             <div className="absolute inset-0 flex justify-center items-center">
-              <div className={`w-full h-full rounded-[50px] ${feature.bgColor}`}></div>
+              <div
+                className={`w-full h-full rounded-[50px] ${feature.bgColor}`}
+              ></div>
             </div>
-            
+
             {/* Content */}
             <div className="relative z-10 flex flex-col gap-6">
-              <h3 className={`${feature.textColor} font-poppins text-xl lg:text-[32px] font-medium leading-normal capitalize`}>
-                <span className="font-bold">{feature.number}</span> {feature.title}
+              <h3
+                className={`${feature.textColor} font-poppins text-xl lg:text-[32px] font-medium leading-normal capitalize`}
+              >
+                <span className="font-bold">{feature.number}</span>{" "}
+                {feature.title}
               </h3>
-              <p className={`${feature.textColor} font-poppins text-base lg:text-xl font-normal leading-normal`}>
+              <p
+                className={`${feature.textColor} font-poppins text-base lg:text-xl font-normal leading-normal`}
+              >
                 {feature.description}
               </p>
             </div>

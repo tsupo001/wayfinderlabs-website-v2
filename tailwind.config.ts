@@ -67,13 +67,13 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        "3xl": "1.5rem", /* 24px */
-        "4xl": "2rem", /* 32px */
-        "5xl": "2.5rem", /* 40px */
-        "6xl": "3.125rem", /* 50px */
+        "3xl": "1.5rem" /* 24px */,
+        "4xl": "2rem" /* 32px */,
+        "5xl": "2.5rem" /* 40px */,
+        "6xl": "3.125rem" /* 50px */,
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
+        poppins: ["Poppins", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

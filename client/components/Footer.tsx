@@ -9,7 +9,7 @@ export default function Footer() {
             className="w-[200px] lg:w-[280px] h-auto aspect-[35/9]"
           />
         </div>
-        
+
         <div className="flex flex-col items-start gap-8 lg:gap-[50px]">
           <div className="flex items-start gap-6 lg:gap-10">
             <p className="text-white font-poppins text-sm lg:text-lg font-normal leading-7">

@@ -18,7 +18,7 @@ export default function Navigation() {
           className="w-[200px] lg:w-[280px] h-auto aspect-[35/9]"
         />
       </div>
-      
+
       <div className="hidden lg:flex items-center gap-8 xl:gap-10">
         {menuItems.map((item) => (
           <a
@@ -30,12 +30,22 @@ export default function Navigation() {
           </a>
         ))}
       </div>
-      
+
       {/* Mobile menu button - simplified for now */}
       <div className="lg:hidden">
         <button className="p-2 text-black">
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
           </svg>
         </button>
       </div>

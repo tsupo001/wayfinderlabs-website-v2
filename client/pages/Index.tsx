@@ -12,28 +12,28 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       {/* Navigation */}
       <Navigation />
-      
+
       {/* Main Content */}
       <main className="flex flex-col gap-16 lg:gap-[70px] pb-16 lg:pb-[70px]">
         {/* Hero Section */}
         <Hero />
-        
+
         {/* Market Making Section */}
         <MarketMaking />
-        
+
         {/* Track Record Section */}
         <TrackRecord />
-        
+
         {/* Our Backbone Section */}
         <OurBackbone />
-        
+
         {/* About Us Section */}
         <AboutUs />
-        
+
         {/* Contact Us Section */}
         <ContactUs />
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>
