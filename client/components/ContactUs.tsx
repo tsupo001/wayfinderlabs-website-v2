@@ -162,7 +162,11 @@ ${formData.message}
                   </Label>
                   <Input
                     id="project"
-                    placeholder="Name"
+                    name="project"
+                    value={formData.project}
+                    onChange={handleInputChange}
+                    placeholder="Project Name"
+                    required
                     className="p-4 lg:p-[18px] rounded-[14px] border border-white bg-white text-gray-500 font-poppins text-base lg:text-lg"
                   />
                 </div>
