@@ -7,6 +7,69 @@ import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 
 export default function ContactUs() {
   const [projectStage, setProjectStage] = useState("pre-tge");
+  const [formData, setFormData] = useState({
+    name: "",
+    project: "",
+    service: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("");
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("");
+
+    try {
+      // Create mailto link with form data
+      const subject = `Contact Form: ${formData.name} - ${formData.project}`;
+      const body = `
+Name: ${formData.name}
+Project: ${formData.project}
+Project Stage: ${projectStage}
+Service: ${formData.service}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+      `.trim();
+
+      const mailtoLink = `mailto:tod@wayfinderlabs.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      // Open user's email client
+      window.location.href = mailtoLink;
+
+      setSubmitStatus("Email client opened. Please send the email to complete your submission.");
+
+      // Reset form after a delay
+      setTimeout(() => {
+        setFormData({
+          name: "",
+          project: "",
+          service: "",
+          email: "",
+          message: ""
+        });
+        setProjectStage("pre-tge");
+        setSubmitStatus("");
+      }, 3000);
+
+    } catch (error) {
+      setSubmitStatus("Error opening email client. Please email us directly at tod@wayfinderlabs.io");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section
