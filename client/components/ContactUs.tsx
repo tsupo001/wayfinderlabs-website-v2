@@ -143,7 +143,11 @@ ${formData.message}
                   </Label>
                   <Input
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     placeholder="Name"
+                    required
                     className="p-4 lg:p-[18px] rounded-[14px] border border-white bg-white text-gray-500 font-poppins text-base lg:text-lg"
                   />
                 </div>
