@@ -24,7 +24,7 @@ export default function Navigation() {
           <a
             key={item.name}
             href={item.href}
-            className="text-black font-poppins text-lg xl:text-xl font-normal leading-7 hover:text-gray-600 transition-colors"
+            className="text-black font-poppins text-base xl:text-lg font-normal leading-7 hover:text-gray-600 transition-colors"
           >
             {item.name}
           </a>
