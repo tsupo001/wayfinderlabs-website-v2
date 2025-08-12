@@ -55,7 +55,7 @@ export default function OurBackbone() {
       </div>
 
       {/* Content Grid */}
-      <div className="grid grid-cols-2 gap-6 w-full max-w-[1244px] px-4">
+      <div className="grid grid-cols-2 gap-4 w-full max-w-[1244px] px-4">
         {features.map((feature, index) => (
           <div
             key={index}
